@@ -5,10 +5,18 @@
 
 ## Dependencies
 
-- python >= 3.5
+- python>=3.5
 - torch==1.1.0
 - transformers>=2.2.2
 - scikit-learn>=0.20.0
+
+## BioBERT for Transformers library
+
+```bash
+>>> from transformers import BertModel, BertTokenizer
+>>> model = BertModel.from_pretrained('monologg/biobert_v1.1_pubmed')
+>>> tokenizer = BertTokenizer.from_pretrained('monologg/biobert_v1.1_pubmed')
+```
 
 ## How to run
 
@@ -24,4 +32,5 @@ F1 Score of 81.44% (mechanism, effect, advise, int)
 
 - [BioBERT](https://github.com/naver/biobert-pretrained)
 - [Huggingface Transformers](https://github.com/huggingface/transformers)
-- [R-BERT Repo](https://github.com/monologg/R-BERT)
+- [R-BERT Repository](https://github.com/monologg/R-BERT)
+- [DDI-recursive-NN Repository](https://github.com/arwhirang/DDI-recursive-NN)

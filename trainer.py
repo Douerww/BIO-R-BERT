@@ -162,9 +162,6 @@ class Trainer(object):
         preds = np.argmax(preds, axis=1)
         result = compute_metrics(preds, out_label_ids)
 
-        from test_cal import calculateMicroValue
-        calculateMicroValue(preds, out_label_ids, labels=[0, 1, 2, 3, 4], filename='111', filename2='222')
-
         results.update(result)
 
         logger.info("***** Eval results *****")

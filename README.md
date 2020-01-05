@@ -1,7 +1,8 @@
 # BIO-R-BERT
 
-- R-BERT on DDI 2013 Bio dataset (**Work In Process**)
-- Using [BioBERT](https://github.com/naver/biobert-pretrained) for pretrained model
+**Relation Extraction** task on DDI 2013 Bio dataset
+  - Using [BioBERT](https://github.com/naver/biobert-pretrained) for pretrained model
+  - Using [R-BERT](https://arxiv.org/abs/1905.08284) for relation extraction modeling
 
 ## Dependencies
 
@@ -16,8 +17,10 @@
   - Relation Extraction task on Bioinformatics
   - 175 MEDLINE abstracts and 730 DrugBank documents
   - 5 DDI types (Negative, Mechanism, Effect, Advice, Int)
+  - Use the preprocessed dataset from [this repo](https://github.com/arwhirang/DDI-recursive-NN)
+  - Didn't replace the name of drug to `DRUG0`, `DRUG1`, or `DRUGN`, comparing to other researches
 
-## BioBERT for Transformers library
+## How to use BioBERT for Transformers library
 
 ```python
 >>> from transformers import BertModel, BertTokenizer
@@ -33,7 +36,18 @@ $ python3 main.py --do_train --do_eval
 
 ## Results
 
-F1 micro score of **81.44%** (Mechanism, Effect, Advice, Int)
+`F1 micro score` on 4 types (Mechanism, Effect, Advice, Int)
+
+|                                                                                                                              | F1 micro (%) |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| [CNN](https://www.researchgate.net/publication/292590022_Drug-Drug_Interaction_Extraction_via_Convolutional_Neural_Networks) | 69.75        |
+| [AB-LSTM](https://arxiv.org/abs/1701.08303)                                                                                  | 69.39        |
+| [MCCNN](https://www.hindawi.com/journals/bmri/2016/1850404/)                                                                 | 70.21        |
+| [GCNN](https://arxiv.org/abs/1805.05593)                                                                                     | 72.55        |
+| [Recursive NN](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0190926)                                    | 73.50        |
+| [RHCNN](https://www.mdpi.com/1099-4300/21/1/37)                                                                              | 75.48        |
+| [SMGCN](https://www.aclweb.org/anthology/D19-6204.pdf)                                                                       | 76.64        |
+| _BIO-R-BERT_                                                                                                                 | **81.44**    |
 
 ## References
 
@@ -41,3 +55,6 @@ F1 micro score of **81.44%** (Mechanism, Effect, Advice, Int)
 - [Huggingface Transformers](https://github.com/huggingface/transformers)
 - [R-BERT Repository](https://github.com/monologg/R-BERT)
 - [DDI-recursive-NN Repository](https://github.com/arwhirang/DDI-recursive-NN)
+- [AB-LSTM Repository](https://github.com/sunilitggu/DDI-extraction-through-LSTM)
+- [MCCNN Repository](https://github.com/coddinglxf/DDI)
+- [RHCNN Repository](https://github.com/DongKeee/DDIExtraction)

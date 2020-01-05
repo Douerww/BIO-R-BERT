@@ -10,9 +10,16 @@
 - transformers>=2.2.2
 - scikit-learn>=0.20.0
 
+## Dataset
+
+- DDI (Drug-Drug Interaction) 2013 dataset ([link](http://labda.inf.uc3m.es/ddicorpus))
+  - Relation Extraction task on Bioinformatics
+  - 175 MEDLINE abstracts and 730 DrugBank documents
+  - 5 DDI types (Negative, Mechanism, Effect, Advice, Int)
+
 ## BioBERT for Transformers library
 
-```bash
+```python
 >>> from transformers import BertModel, BertTokenizer
 >>> model = BertModel.from_pretrained('monologg/biobert_v1.1_pubmed')
 >>> tokenizer = BertTokenizer.from_pretrained('monologg/biobert_v1.1_pubmed')
@@ -26,7 +33,7 @@ $ python3 main.py --do_train --do_eval
 
 ## Results
 
-F1 Score of 81.44% (mechanism, effect, advise, int)
+F1 micro score of **81.44%** (Mechanism, Effect, Advice, Int)
 
 ## References
 

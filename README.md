@@ -1,15 +1,15 @@
 # BIO-R-BERT
 
 **Relation Extraction** task on DDI 2013 Bio dataset
-  - Using [BioBERT](https://github.com/naver/biobert-pretrained) for pretrained model
-  - Using [R-BERT](https://arxiv.org/abs/1905.08284) for relation extraction modeling
 
-## Dependencies
+- Using [BioBERT](https://github.com/naver/biobert-pretrained) for pretrained model
+- Using [R-BERT](https://arxiv.org/abs/1905.08284) for relation extraction modeling
 
-- python>=3.5
-- torch==1.1.0
-- transformers>=2.2.2
-- scikit-learn>=0.20.0
+## Model
+
+<p float="left" align="center">
+    <img width="450" src="https://user-images.githubusercontent.com/28896432/68673458-1b090d00-0597-11ea-96b1-7c1453e6edbb.png" />  
+</p>
 
 ## Dataset
 
@@ -26,6 +26,17 @@
 >>> from transformers import BertModel, BertTokenizer
 >>> model = BertModel.from_pretrained('monologg/biobert_v1.1_pubmed')
 >>> tokenizer = BertTokenizer.from_pretrained('monologg/biobert_v1.1_pubmed')
+```
+
+## Dependencies
+
+- python>=3.5
+- torch==1.1.0
+- transformers>=2.2.2
+- scikit-learn>=0.20.0
+
+```bash
+$ pip3 install -r requirements.txt
 ```
 
 ## How to run

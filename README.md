@@ -47,7 +47,7 @@ $ python3 main.py --do_train --do_eval
 
 ## Results
 
-`F1 micro score` on 4 types (Mechanism, Effect, Advice, Int)
+`F1 micro score` on 4 Positive types (Mechanism, Effect, Advice, Int)
 
 |                                                                                                                              | F1 micro (%) |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------ |

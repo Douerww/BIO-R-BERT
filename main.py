@@ -54,6 +54,7 @@ if __name__ == '__main__':
     parser.add_argument("--do_train", action="store_true", help="Whether to run training.")
     parser.add_argument("--do_eval", action="store_true", help="Whether to run eval on the test set.")
     parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
+    parser.add_argument("--do_lower_case", action="store_true", help="Set this flag if you are using an uncased model.")
 
     args = parser.parse_args()
     main(args)

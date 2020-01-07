@@ -99,6 +99,8 @@ class DDIProcessor(object):
         for (i, line) in enumerate(lines):
             guid = "%s-%s" % (set_type, i)
             text_a = line[1]
+            if self.args.do_lower_case:
+                text_a = text_a.lower()
             label = self.relation_labels.index(line[0])
             if i % 1000 == 0:
                 logger.info(line)
@@ -227,7 +229,12 @@ def load_and_cache_examples(args, tokenizer, mode):
     processor = processors[args.task](args)
 
     # Load data features from cache or dataset file
-    cached_features_file = os.path.join(args.data_dir, 'cached_{}_{}'.format(args.task, mode))
+    cached_file_name = 'cached_{}_{}_{}_{}'.format(
+        args.task, list(filter(None, args.pretrained_model_name.split("/"))).pop(), args.max_seq_len, mode)
+    if args.do_lower_case:
+        cached_file_name = cached_file_name + '_lower'
+
+    cached_features_file = os.path.join(args.data_dir, cached_file_name)
     if os.path.exists(cached_features_file):
         logger.info("Loading features from cached file %s", cached_features_file)
         features = torch.load(cached_features_file)

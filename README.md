@@ -66,7 +66,7 @@ Using R-BERT architecture, with different
 
 |                          | F1 Micro (%) |
 | ------------------------ | ------------ |
-| Random Init              | TBD          |
+| Random Init              | 47.04          |
 | bert-base-cased          | 80.62        |
 | bert-large-cased         | TBD          |
 | biobert_v1.0_pubmed_pmc  | 82.30        |

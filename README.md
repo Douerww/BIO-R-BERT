@@ -66,11 +66,10 @@ Using R-BERT architecture, with different
 
 |                          | F1 Micro (%) |
 | ------------------------ | ------------ |
-| Random Init              | 47.04          |
+| Random Init              | 47.04        |
 | bert-base-cased          | 80.62        |
-| bert-large-cased         | TBD          |
 | biobert_v1.0_pubmed_pmc  | 82.30        |
-| biobert_v1.1_pubmed      | 82.66        |
+| biobert_v1.1_pubmed      | **82.66**    |
 | scibert-scivocab-uncased | 81.30        |
 
 ## References

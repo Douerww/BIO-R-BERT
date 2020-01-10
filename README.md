@@ -62,7 +62,7 @@ $ python3 main.py --do_train --do_eval
 
 ## Comparing the effect of pretrained language models
 
-Using R-BERT architecture, with different
+Using R-BERT architecture, with different pretrained weights
 
 |                          | F1 Micro (%) |
 | ------------------------ | ------------ |

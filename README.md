@@ -68,9 +68,9 @@ Using R-BERT architecture, with different pretrained weights
 | ------------------------ | ------------ |
 | Random Init              | 47.04        |
 | bert-base-cased          | 80.62        |
+| scibert-scivocab-uncased | 81.30        |
 | biobert_v1.0_pubmed_pmc  | 82.30        |
 | biobert_v1.1_pubmed      | **82.66**    |
-| scibert-scivocab-uncased | 81.30        |
 
 ## References
 

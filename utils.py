@@ -15,7 +15,7 @@ def get_label(args):
 
 
 def load_tokenizer(args):
-    tokenizer = BertTokenizer.from_pretrained(args.pretrained_model_name)
+    tokenizer = BertTokenizer.from_pretrained(args.pretrained_model_name, do_lower_case=args.do_lower_case)
     tokenizer.add_special_tokens({"additional_special_tokens": ADDITIONAL_SPECIAL_TOKENS})
     return tokenizer
 

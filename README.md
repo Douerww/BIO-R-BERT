@@ -41,6 +41,8 @@ $ pip3 install -r requirements.txt
 
 ## How to run
 
+You must give `--do_lower_case` option if pretrained model is uncased model.
+
 ```bash
 $ python3 main.py --do_train --do_eval
 ```
